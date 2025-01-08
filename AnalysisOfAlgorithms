@@ -1,0 +1,37 @@
+Asymptotic Analysis: Measuring order of growth in terms of input size.
+
+1) Constant work independent of value of n
+int fun1(int n){
+
+    return n*(n+1)/2
+
+}//fun1->c1
+
+2) Constant work + n times
+int fun2(int n){
+    int sum =0;
+    for(int i=0;i<=n,i++)
+        sum = sum+1;
+    return sum;
+}// fun2->c2*n + c1
+
+Asymptotic notations for n->infinity
+
+Order of growth: f(n) growing faster than g(n) if lim(n->infi) f(n)/g(n)=infi or lim(n->infi) g(n)/f(n)=0
+
+Direct way: Ignore lower order terms and leading constants
+
+---
+Big-O notation: Upper bound on order of growth.
+    Direct way: Ignore lower order terms and leading constants
+---
+Space complexity: Order of growth of memory space in terms of input size.
+
+Auxiliary Space: Order of growth of extra space or temporary space in terms of input size.
+
+int arrSum(int arr[], int n){
+     int sum=0;
+     for(int i=0; i<n; i++){
+        sum = sum + arr[i];
+     }
+}Space: O(n) / Aux: O(1)
