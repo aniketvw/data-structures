@@ -1,0 +1,3 @@
+Insertion in a fixed array: Travers from last element to required. for(int i =length-1;i>=index;i--)
+
+Insert: O(n) / Search: O(n) for sorted | O(n) for unsorted / Delete: O(n) / Get and update: O(1)
