@@ -1,0 +1,75 @@
+Arrays.sort() -> Arrays of primitives(int,char,...)
+              -> Arrays of Objects(String,Integer,Student,...)
+              -> Used to sort normal arrays.(no collections)
+              -> For primitives no custom comparator(only increasing order)
+              ->To sort subArray Arrays.sort(arr,1,4);
+
+Sorting non primitives(Class should implement comparable): compareTo compares current object with other.
+    Class Point implements Comparable<Point>{
+
+    int x,y;
+    Point(int x, int y){
+        this.x=x;
+        this.y=y;
+        }
+    public int compareTo(Point p){
+        return this.x-p.x;
+        }
+    }
+
+    Class Test{
+
+    public static void main(String args[]){
+
+        Point arr[]={new Point(10,20),new Point(3,12),new Point(5,7)}
+        Arrays.sort(arr);
+        for(int i=0;i<arr.length;i++)
+            {sout(arr[i].x+""+arr[i].y)};
+
+        }
+
+    }
+
+Sorting non primitives(Class not implementing Comparable): compare takes two arguments.
+
+    Class Point {
+    int x,y;
+    Point(int x, int y){
+        this.x=x;
+        this.y=y;
+        }
+    }
+    Class Test{
+
+        public static void main(String args[]){
+
+            Point arr[]={new Point(10,20),new Point(3,12),new Point(5,7)}
+            Arrays.sort(arr,new MyCmp());
+            for(int i=0;i<arr.length;i++)
+                {sout(arr[i].x+""+arr[i].y)};
+
+            }
+
+        }
+    }
+
+    Class MyCmp implements Comparator<Point>
+    {
+        public int compare(Point p1, Point p2)
+        {
+            return p1.x-p2.x;
+        }
+    }
+
+
+
+Collections are only made for non primitives.
+
+Array of non primitives should have stable sorting.
+
+Stability in sorting Algorithms:
+    Sorts the array in given condition and maintains previous order.
+
+    Stable Sorts: Bubble Sort/Insertion Sort/Merge Sort
+    Unstable Sorts: Selection Sort/Quick Sort/ Heap Sort
+
