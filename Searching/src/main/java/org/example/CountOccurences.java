@@ -20,9 +20,14 @@ public class CountOccurences {
     }
 
     private static int lastOccur(int target, int low, int high, int[] arr, int lastElement) {
+        int res=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==target){
+                res=i;
+            }
 
-        return 0;
-
+        }
+        return res;
     }
 
     private static int firstOccur(int target, int low, int high, int[] arr) {

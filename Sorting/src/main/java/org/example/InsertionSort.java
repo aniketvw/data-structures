@@ -9,7 +9,7 @@ public class InsertionSort {
 
     public static void main(String[] args) {
 
-        int arr[] = {2, 5, 40, 60, 10, 30};
+        int arr[] = {20, 5, 40, 60, 10, 30};
 
         iSort(arr);
 

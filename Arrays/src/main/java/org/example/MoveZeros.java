@@ -16,16 +16,7 @@ public class MoveZeros {
 
     private static void removeZero(int[] arr) {
 
-        int count=0;
 
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]!=0){
-                int tmp =arr[count];
-                arr[count]=arr[i];
-                arr[i]=tmp;
-                count++;// increase the count of non-zero elements
-            }
-        }
 
     }
 

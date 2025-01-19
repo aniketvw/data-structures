@@ -11,20 +11,17 @@ public class FirstOccurrenceRecursive {
     private static int firstOccurenceR(int target, int low, int high, int[] array){
         if(low>high)
             return -1;
-        if (low==target)
-            return low;
         int mid=(low+high)/2;
 
-        if(array[mid]==target&&array[mid-1]!=target)
-            return mid;
-        if (array[mid-1]==target)
-            return mid-1;
-        if (array[mid]>target){
+        if(array[mid]>target){
             return firstOccurenceR(target,low,mid-1,array);
-        }else if(array[mid]<target){
-           return firstOccurenceR(target,mid+1,high,array);
+        } else if (array[mid]<target) {
+            return firstOccurenceR(target,mid+1,high,array);
+        } else if (mid==0||array[mid-1]!=array[mid]) {
+            return mid;
+        }else {
+            return firstOccurenceR(target,low,mid-1,array);
         }
-        return -1;
     }
 
 }

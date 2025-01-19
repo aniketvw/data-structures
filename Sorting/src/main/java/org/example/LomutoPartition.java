@@ -14,7 +14,7 @@ public class LomutoPartition {
             System.out.println(i);
     }
 
-    private static int lomuto(int[] arr, int pivot,int low,int lastIndex) {
+    public static int lomuto(int[] arr, int pivot,int low,int lastIndex) {
 
         if(pivot!= (arr.length-1)){
             int tmp=arr[pivot];

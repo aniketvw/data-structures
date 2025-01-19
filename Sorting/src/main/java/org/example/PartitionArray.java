@@ -1,5 +1,5 @@
 package org.example;
-//elements smaller than pivot should be before it and larger after it
+//elements smaller than   should be before it and larger after it
 public class PartitionArray {
 
     public static void main(String[] args) {

@@ -9,9 +9,9 @@ public class FirstOccurence {
 
     private static int firstOccurence(int[] arr, int target) {
 
-        int high= arr.length;
+        int high= arr.length-1;
         int low=0;
-        while (low<high){
+        while (low<=high){
             int mid= (low+high)/2;
             if (arr[mid]>target)
                 high=mid-1;
