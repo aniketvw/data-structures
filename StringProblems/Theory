@@ -1,0 +1,10 @@
+String is sequence of characters. Every character is stored in 16bits. Java uses UTF-16 encoding.
+
+4 Ways to create a string:
+    1. Character Array/ArrayLIst
+        char[]=['g','e','f'];
+    2. String Class(Immutable)
+        String str="geeks"
+        or String str= new String("geeks");
+    3. StringBuffer
+    4. String Builder(Not thread safe)
